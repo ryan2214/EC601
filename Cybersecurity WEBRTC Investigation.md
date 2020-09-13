@@ -40,7 +40,9 @@ Console log of this process: [log](https://github.com/ryan2214/EC601/blob/master
 WebRTC also allows data exchange between users by **RTCDataChannel**, which enables text chat between two users. With the help of signaling service, WebRTC could support a chat room.
 
 
-From the view of cybersecurity, *getUserMedia()* may be an dangerous part of user privacy. And there are several features that helps keep this method safe.
+WebRTC is mainly about three parts: *getUserMedia()*, *RTCPeerConnection* and *RTCDataChannel*.
+
+From the view of cybersecurity, *MediaDevices.getUserMedia()* may be an dangerous part of user privacy. And there are several features that helps keep this method safe.
 
 1) *getUserMedia()* can only be used in secure contexts like HTPPS pages or localhost pages;
 
@@ -49,5 +51,4 @@ From the view of cybersecurity, *getUserMedia()* may be an dangerous part of use
 3) Browsers should always display an indicator if user's camera or microphone is in use, and another indicator showing if the permission of using such input device is granted;
 
 In normal cases, these three rules shall keep this method under control.
-
 
