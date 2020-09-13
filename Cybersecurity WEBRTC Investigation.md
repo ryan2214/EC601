@@ -34,5 +34,5 @@ And inside of this connection, A and B exchange information in *Session Descript
 
 6) Exchange complete.
 
-Console log of this process:<https://github.com/ryan2214/EC601/blob/master/log/127.0.0.1-1600005576370.log>
+Console log of this process: [log](https://github.com/ryan2214/EC601/blob/master/log/127.0.0.1-1600005576370.log)
 
