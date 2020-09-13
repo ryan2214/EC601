@@ -7,7 +7,7 @@ WebRTC means Real-time communication over web. It brings opportunities of peer-t
 In order to examine the vulnerability of a WEBRTC technology user, it is necessary to understand how WEBRTC work through the source codes and working console.
 
 
-Here is an example of RTCPeerConnection process between user A and user B:
+Here is an example of **RTCPeerConnection** process between user A and user B:
 
 1) A creates a *RTCPeerConnection* object with listener listening to *icecandidate*;
 
@@ -35,4 +35,19 @@ And inside of this connection, A and B exchange information in *Session Descript
 6) Exchange complete.
 
 Console log of this process: [log](https://github.com/ryan2214/EC601/blob/master/log/127.0.0.1-1600005576370.log)
+
+
+WebRTC also allows data exchange between users by **RTCDataChannel**, which enables text chat between two users. With the help of signaling service, WebRTC could support a chat room.
+
+
+From the view of cybersecurity, *getUserMedia()* may be an dangerous part of user privacy. And there are several features that helps keep this method safe.
+
+1) *getUserMedia()* can only be used in secure contexts like HTPPS pages or localhost pages;
+
+2) Only by receiving user permission could *getUserMedia()* get access to user's audio and video input;
+
+3) Browsers should always display an indicator if user's camera or microphone is in use, and another indicator showing if the permission of using such input device is granted;
+
+In normal cases, these three rules shall keep this method under control.
+
 
