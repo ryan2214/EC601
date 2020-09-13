@@ -52,3 +52,10 @@ From the view of cybersecurity, *MediaDevices.getUserMedia()* may be an dangerou
 
 In normal cases, these three rules shall keep this method under control.
 
+Reference:
+
+<https://developer.mozilla.org/en-US/docs/Glossary/WebRTC>
+
+<https://www.html5rocks.com/en/tutorials/webrtc/basics/>
+
+<https://codelabs.developers.google.com/codelabs/webrtc-web/>
