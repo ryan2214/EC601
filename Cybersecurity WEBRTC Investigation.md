@@ -51,3 +51,10 @@ From the view of cybersecurity, *getUserMedia()* may be an dangerous part of use
 In normal cases, these three rules shall keep this method under control.
 
 
+Reference:
+
+<https://developer.mozilla.org/en-US/docs/Glossary/WebRTC>
+
+<https://www.html5rocks.com/en/tutorials/webrtc/basics/>
+
+<https://codelabs.developers.google.com/codelabs/webrtc-web/>
