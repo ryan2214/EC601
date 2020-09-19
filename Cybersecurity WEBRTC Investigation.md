@@ -52,6 +52,8 @@ From the view of cybersecurity, *MediaDevices.getUserMedia()* may be an dangerou
 
 In normal cases, these three rules shall keep this method under control.
 
+According to three components of WebRTC, if we want to investigate security issues in WebRTC, we should do further research in these three parts.
+
 Reference:
 
 <https://developer.mozilla.org/en-US/docs/Glossary/WebRTC>
