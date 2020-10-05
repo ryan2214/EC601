@@ -7,7 +7,7 @@ peerjs --port 3001
 
 # auto deploy server
 
-npm run devStart                       which means     nodemon server.js
+npm run devStart
 
 # start video chat
 
