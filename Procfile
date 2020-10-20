@@ -1,2 +1,2 @@
-web: peerjs --port 443
+web: peerjs --port $PORT
 web: node server.js
