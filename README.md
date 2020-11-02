@@ -16,3 +16,7 @@ npm run devStart
 2) copy the url in your current browser to another
 
 3) bingo!
+
+# Spots need protection
+
+Public IP, Local network, Bandwidth, Peer Identity
