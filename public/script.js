@@ -24,13 +24,9 @@ navigator.mediaDevices.getUserMedia({
 
     myPeer.on('connection', function(conn) {
         conn.on('data', function(data){
-          //console.log(data);
           var dataRec = document.createElement("dataRec");
           dataRec.textContent = data;
           document.all.dataRecv.innerText = data;
-          var v=data
- 8        document.write("</br>");
- 9        document.write(v);
         });
     });
 
