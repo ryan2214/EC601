@@ -1,6 +1,9 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
-const myPeer = new Peer(undefined, undefined)
+const myPeer = new Peer(undefined, {
+    host: '/',
+    port: '5001'
+})
 const myVideo = document.createElement('video')
 myVideo.muted = true
 const peers = {}
@@ -18,6 +21,16 @@ navigator.mediaDevices.getUserMedia({
             addVideoStream(video, userVideoStream)
         })
     })
+
+    myPeer.on('connection', function(conn) {
+        conn.on('data', function(data){
+          var dataRec = document.createElement("dataRec");
+          dataRec.textContent = data;
+          document.getElementById("dataRecvTA").value = data
+          document.all.dataRecvITA.innerText = data;
+          document.getElementsByTagName("dr")[0].appendChild(dataRec);
+        });
+    });
 
     socket.on('user-connected', userId => {
         console.log('User connected: ' + userId)
@@ -43,7 +56,15 @@ function connectToNewUser(userId, stream) {
     call.on('close', () => {
         video.remove()
     })
-
+    
+    var conn = myPeer.connect(userId);
+    // on open will be launch when you successfully connect to PeerServer
+    conn.on('open', function(){
+    // here you have conn.id
+        var text = document.getElementById("text").value;    
+        conn.send(text);
+    });
+    
     peers[userId] = call
 }
 
