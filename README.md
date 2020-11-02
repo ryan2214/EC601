@@ -29,7 +29,7 @@ https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/
 
 Bandwidth:
 
-DDos, flooding
+DDoS, flooding
 
 Peer Identity:
 
