@@ -26,7 +26,9 @@ navigator.mediaDevices.getUserMedia({
         conn.on('data', function(data){
           var dataRec = document.createElement("dataRec");
           dataRec.textContent = data;
-          document.all.dataRecv.innerText = data;
+          document.getElementById("dataRecvTA").value = data
+          document.all.dataRecvITA.innerText = data;
+          document.getElementsByTagName("dr")[0].appendChild(dataRec);
         });
     });
 
