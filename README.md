@@ -19,4 +19,18 @@ npm run devStart
 
 # Spots need protection
 
-Public IP, Local network, Bandwidth, Peer Identity
+Public IP:
+
+From offer and answer, both peer get IP of the other.
+
+Local network:
+
+https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/
+
+Bandwidth:
+
+DDos, flooding
+
+Peer Identity:
+
+Session description, token, 3rd-party Identity
