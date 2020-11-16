@@ -95,6 +95,7 @@ More of this, about remote peer.
 
 ![](https://ryan2214.github.io/EC601/store_userId.png)
 
-Open a file on the server from server.js at the beginning, and append user info (here is my peerjs example, IP not available) to this file.
+Open a file on the server from server.js at the beginning, and append user info (here is my peerjs example, IP not available) to this file when new user joins.
 
+There could be more logic on how to store these IPs to make sense.
 
