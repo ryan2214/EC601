@@ -73,7 +73,7 @@ We can see the brief content of them, but when we track a certain UDP stream, th
 
 ![](https://ryan2214.github.io/EC601/ws_stream.png)
 
-Maybe the peerjs used in our test website completes the job via using WebRTC function inside the script, this keep us from directly using the sdp content.
+Maybe the peerjs used in our test website completes the job by WebRTC function inside the script, it keeps us from directly using the sdp content.
 
 But if developer is using original WebRTC script, this will still bring some troubles for users.
 
