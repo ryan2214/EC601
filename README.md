@@ -47,6 +47,8 @@ When to store? On connection established.
 
 What to store? IP address abstacted from sdp and ICE candidates.
 
+More, using victim's session description to observe or interfere an on-going video talk. 
+
 # Fiddler
 
 Tool focusing on catching requests and responses in _application layer_.
