@@ -34,3 +34,23 @@ DDoS, flooding
 Peer Identity:
 
 Session description, token, 3rd-party Identity
+
+&nbsp;
+
+# How to use WebRTC session description in attack
+
+Store and analyze all user IPs to build a social network for further attack,
+
+Where to store? Server.
+
+When to store? On connection established.
+
+What to store? IP address abstacted from sdp and ICE candidates.
+
+# Fiddler
+
+Tool focusing on catching requests and responses in _application layer_.
+
+# Wireshark
+
+Tool of analyzing packets in _transport layer_.
