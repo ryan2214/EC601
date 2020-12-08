@@ -1,9 +1,17 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
-const myPeer = new Peer(undefined, {
-    host: '/',
-    port: '5001'
-})
+const myPeer = new Peer(undefined, 
+   // {
+  //  host: '/',
+  //  port: '5001'
+  //  }
+  {
+    config: {'iceServers': [
+      //{ url: 'stun:stun.l.google.com:19302' },
+      { url: 'turn:192.168.1.105:3478', username:'tianhel', credential: 'webrtc' }
+    ]} /* Sample servers, please use appropriate ones */
+  }
+)
 const myVideo = document.createElement('video')
 myVideo.muted = true
 const peers = {}
@@ -17,6 +25,9 @@ navigator.mediaDevices.getUserMedia({
     myPeer.on('call', call => {
         call.answer(stream)
         const video = document.createElement('video')
+
+        console.log(call.tostring)
+        
         call.on('stream', userVideoStream => {
             addVideoStream(video, userVideoStream)
         })
