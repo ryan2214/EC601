@@ -104,3 +104,59 @@ There could be more logic on how to store these IPs to make sense.
 # coturn server
 
 https://github.com/coturn/coturn
+
+# coturn server setup
+
+sudo apt-get install coturn
+
+/etc/turnserver.conf
+
+listening-port=3478
+
+tls-listening-port=5349
+
+listening-ip=your ip
+
+relay-ip=your ip
+
+external-ip=your ip
+
+server-name=your domain
+
+realm=your domain
+
+lt-cred-mech
+
+userdb=/var/lib/turn/turndb
+
+cert=/etc/turn_server_cert.pem
+
+pkey=/etc/turn_server_pkey.pem
+
+no-stdout-log
+
+log-file=/var/tmp/turnserver.log
+
+pidfile="/var/run/turnserver.pid"
+
+# generate ssl certificate
+
+sudo openssl req -x509 -newkey rsa:2048 -keyout   /etc/turn_server_pkey.pem -out /etc/turn_server_cert.pem -days 99999 -nodes
+
+turnadmin -k -u tianhel -r ice.myturn.net -p webrtc
+
+# network port preparation
+
+sudo iptables -A INPUT -p udp --dport 3478 -j ACCEPT
+
+sudo iptables -A INPUT -p udp --dport 5349 -j ACCEPT
+
+sudo iptables-restore < /etc/iptables/rules.v4
+
+# coturn start
+
+systemctl start coturn
+
+systemctl status coturn
+
+sudo turnserver -o -a -f -user=tianhel:webrtc -r ice.myturn.net
