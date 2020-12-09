@@ -1,6 +1,10 @@
 # EC601
  Cybersecurity WEBRTC
 
+# chrome console of WebRTC
+
+chrome://webrtc-internals/
+
 # start localhost peerjs server
 
 peerjs --port 3001
