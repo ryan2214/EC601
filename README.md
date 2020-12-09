@@ -164,3 +164,11 @@ systemctl start coturn
 systemctl status coturn
 
 sudo turnserver -o -a -f -user=tianhel:webrtc -r ice.myturn.net
+
+# coturn server status
+
+![](https://ryan2214.github.io/EC601/coturn_console.png)
+
+# coturn capture(of STUN service)
+
+![](https://ryan2214.github.io/EC601/coturn_capture.png)
